@@ -36,7 +36,7 @@ const Chat = ({location}) => {
  },[ENDPOINT, location]);
 
  useEffect(() => {
-    socket.on('message', (name, message) => {
+    socket.on('message', (_name, message ) => {
     setMessages([...messages,message]);
     })
  }, [messages]);
